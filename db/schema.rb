@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180206193416) do
+ActiveRecord::Schema.define(version: 20180318122743) do
 
   create_table "contents", force: :cascade do |t|
     t.string   "titolo"
@@ -58,6 +58,17 @@ ActiveRecord::Schema.define(version: 20180206193416) do
     t.string   "stripe_token"
     t.text     "error"
     t.integer  "amount"
+  end
+
+  create_table "universities", force: :cascade do |t|
+    t.string   "nome"
+    t.string   "citta"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
